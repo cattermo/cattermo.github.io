@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Anna Cederberg-Orreteg"
+title: "Aktuellt"
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
+{% for post in site.posts %}
     <article class="post">    
       
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -16,4 +15,3 @@ title: "Anna Cederberg-Orreteg"
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-</div>

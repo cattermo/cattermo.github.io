@@ -1,0 +1,231 @@
+$_sheet-border: 1px solid $fyr_color-sheet;
+$_sheet-padding: 0.3em;
+$_sheet-note-width: $_sheet-padding + 0.1em;
+
+.fyr_sheet {
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    text-align: center;
+    @include font-size(13);
+
+    @include fyr_mq-small {
+        @include font-size(16);
+    }
+
+    @include fyr_mq-gte-medium {
+        @include font-size(20);
+    }
+}
+
+.fyr_sheet__lines {
+    display: block;
+    position: relative;
+    border-top: $_sheet-border;
+    height: 0;
+    border-bottom: $_sheet-border;
+    padding-top: $_sheet-padding;
+    padding-bottom: $_sheet-padding + 0.03;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: $_sheet-padding;
+        padding-bottom: $_sheet-padding + 0.03;
+        border-top: $_sheet-border;
+    }
+
+    &:after {
+        border-bottom: $_sheet-border;
+    }
+
+    &:before {
+        position:absolute;
+        top: -0.4em;
+    }
+}
+
+.fyr_sheet__notes-wrapper {
+    $_width: 22em;
+    position: absolute;
+    width: $_width;
+    top: 0;
+    left: 50%;
+    margin-left: -$_width/2;
+
+    @include fyr_mq-extra-extra-small {
+        $_width: 13em;
+        width: $_width;
+        margin-left: -$_width/2;
+    }
+}
+
+%_sheet-stick-down {    
+    &:before {
+        content: '';
+        border-left: 1px solid $fyr_color-sheet-note;
+        height: 1em;
+        position: relative;
+        left: -($_sheet-note-width/2);
+        top: -0.05em;
+    }
+}
+
+%_sheet-stick-up {
+    &:before {
+        content: '';
+        border-right: 1px solid $fyr_color-sheet-note;
+        height: 1em;
+        position: relative;
+        left: ($_sheet-note-width/2);
+        top: -1.05em;
+    }   
+}
+
+.fyr_sheet__note {
+    position: absolute;
+    height: $_sheet-padding;
+    width: $_sheet-note-width;
+    background-color: $fyr_color-sheet-note;
+    border-radius: #{$_sheet-note-width "/" $_sheet-padding};
+
+    .fyr_sheet--animate & {
+        opacity: 0;
+        @include animation-name(fyr_fade-in);
+        @include animation-duration(0.8s);
+        @include animation-fill-mode(forwards);
+        @include animation-timing-function(linear);
+    }
+
+    &.fyr_sheet__note--1 {
+        @extend %_sheet-stick-up;
+        left: 1em;
+        top: 0.65em;
+        @include animation-delay(1s);
+
+        &:after {
+            content: '';
+            display: block;
+            position: relative;
+            border-top: 3px solid $fyr_color-sheet-note;
+            width: 1.15em;
+            top: -2.6em;
+            left: 0.33em;
+            @include rotate(-30);
+        }
+    }
+
+    &.fyr_sheet__note--2 {
+        @extend %_sheet-stick-up;
+        left: 2em;
+        top: 0.18em;
+        @include animation-delay(1250ms);
+    }
+
+    &.fyr_sheet__note--3 {
+        @extend %_sheet-stick-down;
+        left: 3em;
+        top: 0.18em;
+        @include animation-delay(1500ms);
+    }
+
+    &.fyr_sheet__note--4 {
+        @extend %_sheet-stick-up;
+        left: 5em;
+        top: 0.33em;
+        @include animation-delay(2000ms);
+    }
+
+    &.fyr_sheet__note--5 {
+        @extend %_sheet-stick-down;
+        left: 7em;
+        top: 0.18em;
+        @include animation-delay(2500ms);
+    }
+
+    &.fyr_sheet__note--6 {
+        @extend %_sheet-stick-up;
+        left: 9em;
+        top: 0.5em;
+        @include animation-delay(3000ms);
+    }
+
+    &.fyr_sheet__note--7 {
+        @extend %_sheet-stick-up;
+        left: 11em;
+        top: 0.5em;
+        @include animation-delay(3500ms);
+    }
+
+    &.fyr_sheet__note--8 {
+        @extend %_sheet-stick-up;
+        left: 13em;
+        top: 0.65em;
+        @include animation-delay(4000ms);
+
+        @include fyr_mq-extra-extra-small {
+            display:none;       
+        }
+    }
+
+    &.fyr_sheet__note--9 {
+        @extend %_sheet-stick-up;
+        left: 15em;
+        top: 0.33em;
+        @include animation-delay(4500ms);
+
+        @include fyr_mq-extra-extra-small {
+            display:none;       
+        }
+    }
+
+    &.fyr_sheet__note--10 {
+        @extend %_sheet-stick-up;
+        left: 17em;
+        top: 0.65em;
+        @include animation-delay(5000ms);
+
+        @include fyr_mq-extra-extra-small {
+            display:none;       
+        }
+    }
+
+    &.fyr_sheet__note--11 {
+        @extend %_sheet-stick-up;
+        left: 19em;
+        top: 0.33em;
+        @include animation-delay(5500ms);
+
+        @include fyr_mq-extra-extra-small {
+            display:none;       
+        }
+    }
+
+    &.fyr_sheet__note--12 {
+        @extend %_sheet-stick-up;
+        left: 21em;
+        top: 0.13em;
+        background-color: transparent;
+        border: 1px solid $fyr_color-sheet-note;
+        box-sizing: content-box;
+        @include animation-delay(6000ms);
+
+        &:before {
+            left: ($_sheet-note-width/2 + 0.03);
+        }
+
+        @include fyr_mq-extra-extra-small {
+            display:none;       
+        }
+    }
+}
+
+@include keyframes(fyr_fade-in) {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+  }

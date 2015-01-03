@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
+/**
+ * We allways code mobil first and extra features in browsers that's supports media queries
+ *
+ * xsmall   <= 600px (mobile first)
+ * small    > 601px and <= 800px (ex. iPad portrait)
+ * medium   > 800px and <= 1024px (ex iPad landscape, small desktops and laptops)
+ * large    > 1024px (ex desktops and laptops)
+ * xlarge   > 1824px (ex tv and large screens) NOT IN USE RIGHT NOW!
+ *
+ * The order of the media queries are as follow:
+ * - Small or above
+ * - Medium or above
+ * - Large or above
+ * - Extra large or above
+ * - Small, medium and large
+ * - Small and medium
+ * - Medium and large
+ * - Small
+ * - Medium
+ * - Large
+ *
+ * IE <= 8 gets the same CSS as large
+ */
+
+/* X-Extra Small
+   ========================================================================== */
+@mixin fyr_mq-extra-extra-small() {
+    @if not $ie-lte-8 {
+        @media only screen and (max-width: $fyr_mq-breakpoint-max-XXS) {
+            @content;
+        }
+    }
+}
+
+/* Small or above
+   ========================================================================== */
+@mixin fyr_mq-gte-small() {
+    @if $ie-lte-8 {
+        @content;
+    } @else {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-S) {
+            @content;
+        }
+    }
+}
+
+/* Medium or above
+   ========================================================================== */
+@mixin fyr_mq-gte-medium() {
+    @if $ie-lte-8 {
+        @content;
+    } @else {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-M) {
+            @content;
+        }
+    }
+}
+
+/* Large or above
+   ========================================================================== */
+@mixin fyr_mq-gte-large() {
+    @if $ie-lte-8 {
+        @content;
+    } @else {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-L) {
+            @content;
+        }
+    }
+}
+
+/* Extra large or above
+   ========================================================================== */
+@mixin fyr_mq-gte-xlarge() {
+    @if not $ie-lte-8 {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-XL) {
+            @content;
+        }
+    }
+}
+
+/* Small, medium & large
+   ========================================================================== */
+@mixin fyr_mq-small-medium-large() {
+    @if $ie-lte-8 {
+        @content;
+    } @else {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-S) and ($fyr_mq-breakpoint-max-L) {
+            @content;
+        }
+    }
+}
+
+/* Small & medium
+   ========================================================================== */
+@mixin fyr_mq-small-medium() {
+    @if not $ie-lte-8 {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-S) and (max-width: $fyr_mq-breakpoint-max-M) {
+            @content;
+        }
+    }
+}
+
+/* Medium & large
+   ========================================================================== */
+@mixin fyr_mq-medium-large() {
+    @if $ie-lte-8 {
+        @content;
+    } @else {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-M) and (max-width: $fyr_mq-breakpoint-max-L) {
+            @content;
+        }
+    }
+}
+
+/* Small
+   ========================================================================== */
+@mixin fyr_mq-small() {
+    @if not $ie-lte-8 {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-S) and (max-width: $fyr_mq-breakpoint-max-S) {
+            @content;
+        }
+    }
+}
+
+/* Medium
+   ========================================================================== */
+@mixin fyr_mq-medium() {
+    @if not $ie-lte-8 {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-M) and (max-width: $fyr_mq-breakpoint-max-M) {
+            @content;
+        }
+    }
+}
+
+/* Large
+   ========================================================================== */
+@mixin fyr_mq-large() {
+    @if $ie-lte-8 {
+        @content;
+    } @else {
+        @media only screen and (min-width: $fyr_mq-breakpoint-min-L) and (max-width: $fyr_mq-breakpoint-max-L) {
+            @content;
+        }
+    }
+}
+

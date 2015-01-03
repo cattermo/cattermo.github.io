@@ -3,17 +3,25 @@
 #
 
 # Name of your site (displayed in the header)
-name: Test Jekyll
+name: Anna Cederberg-Orreteg
 
 # Short bio or description (displayed in the header)
-description: Testing the Jekyll at Github pages
+description: "Tonsättare, musiklärare, körledare"
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
-
+  
 #
 # Flags below are optional
 #
+
+menu: 
+    - biografi
+    - musik
+    - noter
+    - aktuellt
+    - pressbilder
+    - kontakt
 
 # Includes an icon in the footer for each username you enter
 footer-links:

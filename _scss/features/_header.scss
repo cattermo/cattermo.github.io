@@ -1,0 +1,32 @@
+.fyr_header {
+    @include clearfix;
+}
+
+.fyr_header__name {
+    @extend %fyr_text-h1;
+    float: left;
+    width: 54%;
+
+    @include fyr_mq-gte-small {
+        margin-top: 0.3em;
+        float: none;
+        width: 100%;
+    }
+}
+
+.fyr_header__desc {
+    display: block;
+    float: left;
+    width: 54%;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+
+    @include fyr_mq-extra-extra-small {
+        clear: both;
+        width: 100%;
+    }
+
+    @include fyr_mq-gte-small {
+        width: 100%;
+    }
+}

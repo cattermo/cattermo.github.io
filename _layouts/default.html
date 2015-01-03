@@ -13,44 +13,63 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    <!--[if (lte IE 8)&!(IEMobile)]>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/iestyle.css" />
+    <![endif]-->
+    <!--[if (gte IE 9)|(IEMobile)|!(IE)]><!-->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <!--><![endif]-->
+
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-          
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+    <div class="fyr_main-container">
+        <div class="fyr_sheet{% if page.url == '/index.html'%} fyr_sheet--animate{% endif %}">
+          <span class="fyr_sheet__lines">
+            <span class="fyr_sheet__notes-wrapper">
+              <span class="fyr_sheet__note fyr_sheet__note--1"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--2"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--3"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--4"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--5"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--6"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--7"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--8"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--9"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--10"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--11"></span>
+              <span class="fyr_sheet__note fyr_sheet__note--12"></span>
+            </span>
+          </span>
+        </div>
+        <!-- <img class="fyr_masterhead__img" src="/images/anna.jpg" /> -->
+        
+      <div id="main" role="main" class="fyr_container">
+        <header class="fyr_container__left">
+          <div class="fyr_header">
+            <figure class="fyr_profile-picture">
+              <img class="fyr_profile-picture__img" src="/images/anna.jpg" />
+              <span class="fyr_profile-picture__blur"></span>
+            </figure>
+            <h1 class="fyr_header__name"><a href="{{ site.baseurl }}/">Anna <br/>Cederberg-Orreteg</a></h1>
+            <p class="fyr_header__desc">{{ site.description }}</p>
           </div>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
+          {% include menu.html %}
         </header>
+        <div class="fyr_container__right">
+        {{ content }}
+        </div>
       </div>
     </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+    <footer class="fyr_footer">
+      <div class="fyr_sheet">
+        <span class="fyr_sheet__lines"></span>
       </div>
-    </div>
-
+    </footer>
+    <div class="fyr_cover"></div>
     {% include analytics.html %}
   </body>
 </html>
