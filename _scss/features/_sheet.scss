@@ -203,7 +203,7 @@ $_sheet-note-width: $_sheet-padding + 0.1em;
     }
 
     &.fyr_sheet__note--12 {
-        @extend %_sheet-stick-up;
+        @extend %_sheet-stick-down;
         left: 21em;
         top: 0.13em;
         background-color: transparent;
@@ -212,7 +212,7 @@ $_sheet-note-width: $_sheet-padding + 0.1em;
         @include animation-delay(6000ms);
 
         &:before {
-            left: ($_sheet-note-width/2 + 0.03);
+            left: -($_sheet-note-width/2 + 0.03);
         }
 
         @include fyr_mq-extra-extra-small {
