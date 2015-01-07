@@ -1,11 +1,12 @@
 .fyr_profile-picture {
     @include clearfix;
     float: left;
-    width: 40%;
+    max-width: 40%;
     margin-right: 4%;
     position: relative;
 
     @include fyr_mq-gte-small {
+        max-width: none;
         width: 200px;
         float: none;
         margin-left: auto;
@@ -14,6 +15,7 @@
 }
 
 .fyr_profile-picture__img {
+    @include fyr_image-border;
     display: block;
 }
 
