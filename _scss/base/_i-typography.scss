@@ -1,10 +1,11 @@
-%fyr_text-body {
+@mixin fyr_text-body {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	@include font-size(12);
 	line-height: 1.4;
 }
 
-%fyr_text-h1 {
+@mixin fyr_text-h1 {
+    font-family: "Optima", "Calibri","Candara", sans-serif;
     @include font-size(17);
     line-height: 1.2;
 
@@ -13,7 +14,7 @@
     }
 }
 
-%fyr_text-h2 {
+@mixin fyr_text-h2 {
     @include font-size(15);
     line-height: 1.2;
 

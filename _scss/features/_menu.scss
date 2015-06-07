@@ -1,5 +1,5 @@
 .fyr_menu {
-    @extend %fyr_text-body;
+    @include fyr_text-body;
     margin-top: 1em;
 }
 

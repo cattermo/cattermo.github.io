@@ -3,7 +3,7 @@
 }
 
 .fyr_header__name {
-    @extend %fyr_text-h1;
+    @include fyr_text-h1;
     float: left;
     width: 54%;
 

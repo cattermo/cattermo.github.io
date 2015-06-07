@@ -13,7 +13,6 @@ $_left-column-width: 14em;
 $_left-column-width-medium: 17em;
 
 .fyr_container__left {
-    //background-color: rgba(196, 219, 147, 0.5);
     border-radius: 1em;
 
     @include fyr_mq-gte-small {
