@@ -1,10 +1,13 @@
 ---
 layout: default
-title: "Biografi"
+title: Biografi
+published: true
 ---
 
-Hej och välkommen till min hemsida. Jag har förstått att det är väldigt bra att ha en sådan. Så... här är den!
 
+## Hej och välkommen till min hemsida
+
+Jag har förstått att det är väldigt bra att ha en sådan. Så... här är den!
 
 Jag heter Anna Cederberg-Orreteg, passerade 50 för några år sedan, är född och uppvuxen i västra Stockholm där jag också bor. 
 
@@ -25,6 +28,3 @@ Parallellt med mitt s k pedagogiska skrivande i skolan har jag alltid skrivit f�
 Viktigt för mig har varit att, vid sidan om mitt arbete som musiklärare, själv få utöva musik i någon form. Sjunger just nu i Kammarkören Musikaliska och Damkören Salvia som jag också leder tillsammans med Lena Uggla och så har jag äntligen, efter drygt 20 år, tagit upp mitt kontrabasspel, och är med och spelar i St Tomas orkesterförening i Vällingby.
 
 Efter att i alla år ha skrivit mest vokalt har de senaste åren gett möjlighet att utforska även den instrumentala klangvärlden vilket inte kan ge annat än mersmak.
-
-
-
