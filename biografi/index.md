@@ -5,6 +5,7 @@ published: true
 ---
 
 
+
 ## Hej och välkommen till min hemsida
 
 Jag har förstått att det är väldigt bra att ha en sådan. Så... här är den!
@@ -13,7 +14,7 @@ Jag heter Anna Cederberg-Orreteg, passerade 50 för några år sedan, är född 
 
 Har nästan 30 år bakom mig som musiklärare i grundskolan och gymnasiet, senast på Höglandsskolan i Bromma. Numera för jag en frilansande tillvaro som tonsättare och arrangör men fortsätter också mitt pedagogiska arbete bl a på Sjöviks folkhögskola där jag undervisar i körledning, vokalensemble och metodik. Jag håller även i studiedagar och seminarier, gästar gärna körer, både barn och vuxna och ofta tillsammans med mina arbetspartners Anna Högberg och/el Lena Uggla.
 
-Vill du veta mer…?
+### Vill du veta mer…?
 
 Gick ut KMH 1982, den gamla lärarutbildningen där man efter examen blir titulerad ”musikdirektör”.  Mitt huvudinstrument var piano och kontrabasen mitt biinstrument. Men det jag älskat allra mest är att sjunga. Inte ensam, det är inte riktigt jag, utan tillsammans med andra, i kör eller i grupp. 
 
