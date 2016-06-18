@@ -3,11 +3,12 @@
 }
 
 .fyr_header__name {
-    @include fyr_text-h1;
+    @include font-size(17);
+    //font-family Optima
     float: left;
     width: 54%;
 
-    @include fyr_mq-gte-small {
+    @include fyr_mq-gte-medium {
         margin-top: 0.3em;
         float: none;
         width: 100%;

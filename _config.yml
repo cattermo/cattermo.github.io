@@ -16,12 +16,12 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 #
 
 menu: 
-    - biografi
-    - musik
-    - noter
-    - aktuellt
-    - pressbilder
-    - kontakt
+    - Om mig
+    - Min musik
+    - Körer
+    - Pressbilder
+    - Kontakt
+    - Potpurri
 
 # Includes an icon in the footer for each username you enter
 footer-links:

@@ -15,14 +15,10 @@ $_left-column-width-medium: 17em;
 .fyr_container__left {
     border-radius: 1em;
 
-    @include fyr_mq-gte-small {
-        width: $_left-column-width;
-        padding-right: 1em;
-        float: left;
-    }
-
     @include fyr_mq-gte-medium {
         width: $_left-column-width-medium;
+        padding-right: 1em;
+        float: left;
     }
 }
 
@@ -31,17 +27,12 @@ $_left-column-width-medium: 17em;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.5em;
 
-    @include fyr_mq-gte-small {
+    @include fyr_mq-gte-medium {
         margin-top: 0;
         background-color: transparent;
         float: left;
-        width: 16em;
-        width: calc(100% - #{$_left-column-width});
-        padding: 0 0 0 1em;
-    }
-
-    @include fyr_mq-gte-medium {
         width: 23em;
         width: calc(100% - #{$_left-column-width-medium});
+        padding: 0 0 0 1em;
     }
 }
